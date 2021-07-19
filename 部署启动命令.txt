@@ -17,22 +17,40 @@ npm install tronweb
 npm install forever
 
 
+linux下配置forever
+vi /etv/profile
+export PATH=$PATH:/data/tools/nodejs/lib/node_modules/forever/bin/
+source /etv/profile
+
+
+linux下配置nodejs的方式，解压tar.gz包，指向软目录设置即可
+ln -s /data/tools/nodejs/bin/node /usr/local/bin/node  
+ln -s /data/tools/nodejs/bin/npm /usr/local/bin/npm
+
+
 //管理trx服务器
 cd /data/nodejs/
-forever stop ./trx/index.js 
-forever start  ./trx/index.js 
+forever stop ./trx_server/index.js 
+forever start ./trx_server/index.js 
 forever list
+
 
 //管理eth服务器
 cd /data/nodejs/
-forever stop ./eth/index.js 
-forever start  ./eth/index.js 
+forever stop ./eth_server/index.js 
+forever start ./eth_server/index.js 
 forever list
+
 
 //启动查看所有
 forever stopall 
 forever list
 forever restartall
+
+
+
+
+
 
 
 

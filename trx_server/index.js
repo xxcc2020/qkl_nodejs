@@ -1,16 +1,17 @@
 //导入引用的库和配置
-var config = require("./config");
-var http_service = require("./http_service");
-
-//引用工具类
+CONFIG = require("./config");
 fw_http = require("../framework/fw_http");
-fw_log  = require("../framework/fw_log");
+fw_log = require("../framework/fw_log");
 fw_util = require("../framework/fw_util");
 trx_util = require("./trx_util");
+//http服务器
+var http_service = require("./http_service");
+
+//初始化日志工具
+fw_log.initLog("./logs/trx", "debug");
 
 //启动远端访问的http代码
-fw_log.initLog("./logs/trx", "debug");
-http_service.start(config);
+http_service.start();
 
 //测试数据
 //trx_util.getTrxBalance("TEhobA6Ub3fAtrJGwBnA3fZU4pQCTNz1gg");
