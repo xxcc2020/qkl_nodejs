@@ -1,6 +1,6 @@
 //创建trx充值地址
 var CreateTrxAccountReq = {
-    UserId,        //int
+    UserId,        //int 用户Id
 }
 
 //创建trx充值地址
@@ -68,22 +68,22 @@ var TransactionTrxAck = {
 	TxId,          //string 区块链交易id
 }
 
-//查询Usdt转账列表
+//查询USDT转账列表
 var QueryUsdtTransactionListReq = {
 	Address, 	   //string 账户的trx地址私钥
 }
 
-//查询Usdt转账列表
+//查询USDT转账列表
 var QueryUsdtTransactionListAck = {
-	Data, 	   //array 转账记录的数据结构体列表
+	Data, 	   	   //array 转账记录的数据结构体列表
 }
 
-//查询Trx转账
-var QueryUsdtTransactionListReq = {
-	TxId, 	   //string 区块链交易Id
+//查询单条Trx转账
+var QueryTrxTransactionReq = {
+	TxId, 	       //string 区块链交易Id
 }
 
-//查询Usdt转账
-var QueryUsdtTransactionListAck = {
-	Data, 	   //array 转账记录的数据结构体列表
+//查询单条Trx转账
+var QueryTrxTransactionAck = {
+	Data, 	      //array 转账记录的数据结构体列表
 }
