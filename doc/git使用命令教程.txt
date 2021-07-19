@@ -1,0 +1,70 @@
+=================================================
+git配置本地用户信息
+=================================================
+配置邮箱
+git config --global user.email "xxxx@xx.com" 
+配置本地用户
+git config --global user.name "xxcc2020"
+
+
+=================================================
+git首次提交步骤(仓库无任何内容)
+=================================================
+进入对应目录
+cd  E:\gitsaves\go_leaf_server
+
+初始化目录
+git init  
+
+添加要提交的东西
+git add ./
+
+提交和注释
+git commit -m "first commit"
+
+创建分支main
+git branch -M main
+
+连接到远程 本地名字为  origin
+git remote add origin https://github.com/xxcc2020/go_leaf_server.git
+
+把origin内容push到远程main分支
+git push -u origin main
+
+
+=================================================
+git-新用户首次直接拉取仓库内容
+=================================================
+直接克隆远程服务器资源
+git clone https://github.com/xxcc2020/go_leaf_server.git
+
+
+=================================================
+git提交步骤
+=================================================
+添加要提交的东西
+git add ./
+
+提交和注释
+git commit -m "提交注释"
+
+直接上传
+git push
+
+
+git add ./
+git commit -m "提交注释"
+git push
+
+
+
+
+
+
+
+
+
+
+
+
+
