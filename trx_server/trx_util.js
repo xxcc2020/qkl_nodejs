@@ -76,12 +76,12 @@ exports.sendTransactionTRX = async (privateKey, address, count) => {
 
 
 //**************************************************************************
-//查询Trx转账记录
+//查询TRX转账记录
 //**************************************************************************
 exports.getTransaction = async (txid) => {
 	const tronWeb = new TronWeb(fullNode, solidityNode, eventServer);
 	const resp = await tronWeb.trx.getTransaction(txid)
-	fw_log.info("Trx转账记录:" + JSON.stringify(resp));
+	fw_log.info("TRX转账记录:" + JSON.stringify(resp));
 	return resp;
 }
 
