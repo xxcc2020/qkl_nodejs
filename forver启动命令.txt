@@ -1,0 +1,27 @@
+//管理trx服务器
+svn update /data/robotcoin/nodejs/trx_server
+cd /data/robotcoin/nodejs/
+forever stop ./trx_server/index.js 
+forever start  ./trx_server/index.js 
+forever list
+
+//管理eth服务器
+svn update /data/robotcoin/nodejs/gate_server
+cd /data/robotcoin/nodejs/
+forever stop ./gate_server/index.js 
+forever start  ./gate_server/index.js 
+forever list
+
+tail -f logs/trx
+cd /data/robotcoin/nodejs/logs/
+
+tail -f logs/gate
+cd /data/robotcoin/nodejs/logs
+
+forever stopall 
+forever list
+forever restartall
+
+
+
+
