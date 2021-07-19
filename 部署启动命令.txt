@@ -1,23 +1,35 @@
+安装express框架
+npm install express
+
+安装log4j框架
+npm install log4js
+
+安装代码自动重启库
+npm install nodemon
+
+安装mysql
+npm install mysql
+
+安装tornweb
+npm install tronweb
+
+守护进程foorever
+npm install forever
+
+
 //管理trx服务器
-svn update /data/robotcoin/nodejs/trx_server
-cd /data/robotcoin/nodejs/
-forever stop ./trx_server/index.js 
-forever start  ./trx_server/index.js 
+cd /data/nodejs/
+forever stop ./trx/index.js 
+forever start  ./trx/index.js 
 forever list
 
 //管理eth服务器
-svn update /data/robotcoin/nodejs/gate_server
-cd /data/robotcoin/nodejs/
-forever stop ./gate_server/index.js 
-forever start  ./gate_server/index.js 
+cd /data/nodejs/
+forever stop ./eth/index.js 
+forever start  ./eth/index.js 
 forever list
 
-tail -f logs/trx
-cd /data/robotcoin/nodejs/logs/
-
-tail -f logs/gate
-cd /data/robotcoin/nodejs/logs
-
+//启动查看所有
 forever stopall 
 forever list
 forever restartall
